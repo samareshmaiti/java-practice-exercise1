@@ -17,6 +17,7 @@ public class SubstringRepeat {
         {
             result=result+sub;
         }
+
         System.out.println(result);
 
     }
