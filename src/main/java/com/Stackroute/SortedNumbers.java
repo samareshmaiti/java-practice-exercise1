@@ -2,7 +2,7 @@ package com.Stackroute;
 import java.util.Scanner;
 public class SortedNumbers {
     public static void main(String[] args) {
-
+        int sum=0;
         int number1 = 0;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the number");
@@ -26,9 +26,19 @@ public class SortedNumbers {
 
                 int digit = number1% 10;
                 reverse = reverse * 10 + digit;
+
                 number1 /= 10;
+
+
             }
 
+
         System.out.println(reverse);
+        while(reverse>0)
+        {
+            int rem=reverse/10;
+            sum=sum+rem;
+        }
+        System.out.println(sum);
     }
 }
