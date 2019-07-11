@@ -11,7 +11,7 @@ public class SubstringRepeat {
         int number=sc.nextInt();
 
         int lengthOfString=str.length();
-        String sub=str.substring(number,lengthOfString);
+        String sub=str.substring(lengthOfString-number,lengthOfString);
         String result=str;
         for(int i=0;i<number;i++)
         {

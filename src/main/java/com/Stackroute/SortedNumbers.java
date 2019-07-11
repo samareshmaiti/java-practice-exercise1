@@ -20,6 +20,15 @@ public class SortedNumbers {
                 number2 /= 10;
             }
         }
-        System.out.println(number1);
+        int reverse=0;
+        while(number1>0)
+        {
+
+                int digit = number1% 10;
+                reverse = reverse * 10 + digit;
+                number1 /= 10;
+            }
+
+        System.out.println(reverse);
     }
 }
