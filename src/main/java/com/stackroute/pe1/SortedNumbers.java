@@ -1,14 +1,16 @@
-package com.Stackroute;
+package com.stackroute.pe1;
 import java.util.Scanner;
+
 public class SortedNumbers {
-    public static void main(String[] args) {
+    public int digitSorting(int number)
+    {
+        if(number==0)
+        {
+            return 0;
+        }
         int sum=0;
         int number1 = 0;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the number");
-        int number=sc.nextInt();
-
-        for (int i = 9; i >= 0; i--) {
+         for (int i = 9; i >= 0; i--) {
             int number2 = number;
             while (number2 > 0) {
                 int digit = number2 % 10;
@@ -23,22 +25,13 @@ public class SortedNumbers {
         int reverse=0;
         while(number1>0)
         {
-
-                int digit = number1% 10;
+            int digit = number1% 10;
                 reverse = reverse * 10 + digit;
-
-                number1 /= 10;
-
-
-            }
-
-
-        System.out.println(reverse);
-        while(reverse>0)
-        {
-            int rem=reverse/10;
-            sum=sum+rem;
+                 number1 /= 10;
         }
-        System.out.println(sum);
+
+
+       // System.out.println(reverse);
+        return reverse;
     }
 }
